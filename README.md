@@ -1,2 +1,2 @@
-# Dad's Day Out
+# Daddy's Day Out
 A small game for Father's day.
