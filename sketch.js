@@ -110,7 +110,7 @@ function setup() {
   title = createElement("h3");
   title.elt.id = "title";
   title.position(400, 400);
-  title.html("Dad's Day Out");
+  title.html("Daddy's Day Out");
 
   rules = createElement("h3");
   rules.elt.id = "rules";
