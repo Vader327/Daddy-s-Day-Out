@@ -5,7 +5,7 @@ html, body {
 canvas {
 	border: solid #f79533;
 	border-radius: 2em;
-	border-width: 0.2cm;
+	border-width: 0.4cm;
 	-webkit-animation: border_gradient 5s ease alternate infinite;
 }
 
@@ -91,6 +91,14 @@ canvas {
 	text-align: center;
 }
 
+#start_text{
+	font-family: 'Quicksand';
+	font-size: 30px;
+	color: #fff;
+	text-align: center;
+	-webkit-animation: glow 1s ease-in-out infinite alternate;
+}
+
 @-webkit-keyframes gradient {
   0%{background-position:0% 50%}
   50%{background-position:100% 50%}
@@ -98,11 +106,16 @@ canvas {
 }
 
 @-webkit-keyframes border_gradient {
-  0%{border: solid #f37055;border-width: 0.2cm;}
-  10%{border: solid #ef4e7b;border-width: 0.2cm;}
-  20%{border: solid #a166ab;border-width: 0.2cm;}
-  30%{border: solid #5073b8;border-width: 0.2cm;}
-  40%{border: solid #1098ad;border-width: 0.2cm;}
-  50%{border: solid #07b39b;border-width: 0.2cm;}
-  60%{border: solid #6fba82;border-width: 0.2cm;}
+  0%{border: solid #f37055;border-width: 0.4cm;}
+  10%{border: solid #ef4e7b;border-width: 0.4cm;}
+  20%{border: solid #a166ab;border-width: 0.4cm;}
+  30%{border: solid #5073b8;border-width: 0.4cm;}
+  40%{border: solid #1098ad;border-width: 0.4cm;}
+  50%{border: solid #07b39b;border-width: 0.4cm;}
+  60%{border: solid #6fba82;border-width: 0.4cm;}
+}
+
+@-webkit-keyframes glow {
+	from {text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073}
+	to {text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6}
 }

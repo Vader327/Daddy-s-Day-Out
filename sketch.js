@@ -16,7 +16,7 @@ var over, restart, caught_virus;
 var title, rules, start;
 var level_head, level_text;
 var next, next_button, end_text;
-var shop_title, array, goal;
+var shop_title, array, goal, start_text;
 var virus1, virus2, virus3, virus4, virus5, virus6, virus7, virus8;
 
 function preload(){
@@ -128,7 +128,7 @@ function setup() {
 
   level_text = createElement("h3");
   level_text.elt.id = "level_head_text";
-  level_text.position(140, 60);
+  level_text.position(140, 80);
   level_text.html("Always be informed about what is going on around the world.<br>Fetch the newspaper without getting the virus, then go back inside.");
   level_text.hide();
 
@@ -150,13 +150,19 @@ function setup() {
   end_text.hide();
 
   shop_title = createElement("h3");
-  shop_title.elt.id = "rules";
-  shop_title.position(1000, 740);
+  shop_title.elt.id = "start_text";
+  shop_title.position(1018, 758);
   shop_title.html("Grocery Store");
   shop_title.hide();
 
   goal = createSprite(1020,700,40,40);
   goal.visible = false;
+
+  start_text = createElement("h3");
+  start_text.elt.id = "start_text"
+  start_text.position(500,850);
+  start_text.html("Start");
+  start_text.hide();
 }
 
 function draw() {
@@ -199,6 +205,7 @@ function draw() {
     paper.visible = true;
     level_head.show();
     level_text.show();
+    start_text.show();
 
     background(homeIMG);
     if(move_disabled === false){
@@ -225,7 +232,6 @@ function draw() {
       virus1.velocityY = 3;
       if(virus1.y > 400){
         virus1.velocityY = 0;
-        move_disabled = false;
       }
     }
     if(virus2.x > 550){
@@ -233,6 +239,8 @@ function draw() {
       virus2.velocityY = 3;
       if(virus2.y > 450){
         virus2.velocityY = 0;
+        start_text.hide();
+        move_disabled = false;
       }
     }
 
@@ -271,6 +279,9 @@ function draw() {
   }
 
   if(level===2){
+    start_text.position(640,550);
+    if(level1===1){start_text.html("Start")}
+    start_text.show();
     virus1.x = 870;
     virus1.y = 460;
     virus2.x = 620;
@@ -324,6 +335,7 @@ function draw() {
       rect(600,600,600,250);
       pop();
 
+      start_text.hide();
       next.show();
       next_button.show();
       move_disabled = true;
@@ -338,6 +350,7 @@ function draw() {
       if(level2 != 1){move_disabled = false}
       level_text.position(250, 60);
       level_text.html("Now return to your house, without touching the virus.");
+      start_text.html("Finish");
       goal.x = 660;
       goal.y = 580;
 
@@ -349,6 +362,7 @@ function draw() {
         rect(600,600,600,250);
         pop();
 
+        start_text.hide();
         next.show();
         next_button.show();
         end_text.show();
@@ -385,6 +399,8 @@ function draw() {
           level = 0;
           level_text.position(140, 60);
           level_text.html("Always be informed about what is going on around the world.<br>Fetch the newspaper without getting the virus, then go back inside.");
+          start_text.position(500,850);
+          start_text.html("Start");
         })
       }
     }
@@ -415,6 +431,7 @@ function move(obj){
 
 function end(){
   if(state==="end"){
+    start_text.hide();
     push();
     strokeWeight(10);
     stroke("red")
