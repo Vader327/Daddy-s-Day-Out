@@ -1,0 +1,95 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+	display: block;
+}
+
+#over{
+  color:white;
+  font-family: 'Quicksand';
+  font-weight: 900;
+  font-size: 60px;
+
+  background: linear-gradient(270deg, #ec1818, #ec6e18, #ec9d18, #ecb918);
+  background-size: 800% 800%;
+
+  -webkit-animation: gradient 10s ease infinite;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#caught_virus{
+  color:white;
+  font-family: 'Quicksand';
+  font-weight: 900;
+  font-size: 40px;
+
+  background: linear-gradient(270deg, #ec1818, #ec6e18, #ec9d18, #ecb918);
+  background-size: 800% 800%;
+
+  -webkit-animation: gradient 10s ease infinite;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#restart{
+	width: 4cm;
+	height: 1cm;
+	display:inline-block;
+	border: none;
+	border-radius:2em;
+	font-family:'Quicksand',sans-serif;
+	font-weight:300;
+	font-size: 25px;
+	color:#FFFFFF;
+	background-color:#4eb5f1;
+	text-align:center;
+	transition: background-color 0.5s ease-in-out;
+	outline: none;
+}
+#restart:hover {
+	background-color: rgb(77, 212, 65);
+	outline: none;
+	transition: background-color 0.5s ease-in-out;
+}
+
+#title{
+	color:white;
+	font-family: 'Quicksand';
+	font-weight: 900;
+	font-size: 60px;
+  
+	background: linear-gradient(270deg, #07c1f0, #fff27f, #88ffc8, #eca218);
+	background-size: 800% 800%;
+  
+	-webkit-animation: gradient 15s ease infinite;
+  
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+  
+#rules{
+	color:rgb(168, 238, 55);
+	font-family: 'Quicksand';
+	font-weight: 900;
+	font-size: 30px;
+	text-align: center;
+}
+
+#level_head_text{
+	color:rgb(255, 187, 0);
+	font-family: 'Quicksand';
+	font-weight: 900;
+	font-size: 30px;
+	text-align: center;
+}
+
+@-webkit-keyframes gradient {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
