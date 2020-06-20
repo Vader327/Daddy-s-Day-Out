@@ -315,7 +315,7 @@ function draw() {
     pop();
 
     level_text.position(10, 60)
-    level_text.html("You need to go out to by groceries. Go to the grocery store without touching the virus.")
+    level_text.html("You need to go out to buy groceries. Go to the grocery store without touching the virus.")
     
     push();
     strokeWeight(10);
